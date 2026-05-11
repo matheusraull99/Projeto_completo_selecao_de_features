@@ -20,6 +20,8 @@ Prever se uma reserva de hotel será cancelada (`booking_status`: 0 = não cance
 - Mapa de correlação entre features (heatmap)
 - Feature Importance a partir do Random Forest
 
+![Feature Importance](images/feature_importance.png)
+
 ### Aula 3 — Automatizando a seleção
 - **`SelectFromModel`** com top 10 features → Score: **89,77%**
 - **`GridSearchCV`** para otimização de hiperparâmetros
@@ -30,6 +32,8 @@ Prever se uma reserva de hotel será cancelada (`booking_status`: 0 = não cance
 - **`RFECV`** com StratifiedKFold (5 folds) → Número ideal de features: **25** → ROC AUC: **~0.9699**
 - Visualização comparativa do desempenho por número de features
 
+![RFECV por número de features](images/rfecv_scores.png)
+
 ## Resultados Comparativos
 
 | Método | Features | Score (Accuracy) |
@@ -38,6 +42,16 @@ Prever se uma reserva de hotel será cancelada (`booking_status`: 0 = não cance
 | SelectFromModel | 10 | 89,77% |
 | RFE | 10 | 91,26% |
 | RFECV | 25 | ~96,99% (ROC AUC) |
+
+![Comparativo de Scores](images/comparativo_scores.png)
+
+### Matriz de Confusão — RFE
+
+![Matriz de Confusão](images/matriz_confusao.png)
+
+### Curva ROC — RFE
+
+![Curva ROC](images/roc_curve.png)
 
 ## Tecnologias
 
